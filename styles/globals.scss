@@ -1,0 +1,42 @@
+$foreground-rgb: rgb(255, 255, 255);
+$background-first-rgb: rgb(32, 30, 39);
+$background-second-rgb: rgb(2, 10, 19);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  color-scheme: dark;
+}
+
+body {
+  color: $foreground-rgb;
+  background: linear-gradient(to bottom right,
+      $background-first-rgb,
+      $background-second-rgb,
+      $background-first-rgb);
+      
+}
+
+a {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 0.8rem;
+  }
+}
